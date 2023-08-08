@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0CF56894-B8A3-40B3-812B-A9F11CFD7D61}</ProjectGuid>
+    <RootNamespace>InterpolationDemo</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>GT400.lib;</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\InterpolationDemo.ico" />
+    <None Include="res\InterpolationDemo.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="add_heaer.h" />
+    <ClInclude Include="GT_Move.h" />
+    <ClInclude Include="inf.h" />
+    <ClInclude Include="Interpolating.h" />
+    <ClInclude Include="InterpolationDemo.h" />
+    <ClInclude Include="InterpolationDemoDlg.h" />
+    <ClInclude Include="MyNewDlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AxisInitialSV.cpp" />
+    <ClCompile Include="AxisInitialSG.cpp" />
+    <ClCompile Include="CircleCenter.cpp" />
+    <ClCompile Include="copyTxt.cpp" />
+    <ClCompile Include="DDA_Cricle.cpp" />
+    <ClCompile Include="DDA_line.cpp" />
+    <ClCompile Include="delay.cpp" />
+    <ClCompile Include="DelLineData.cpp" />
+    <ClCompile Include="drawAxle.cpp" />
+    <ClCompile Include="DrawCircle.cpp" />
+    <ClCompile Include="DrawLine.cpp" />
+    <ClCompile Include="DrawTrack.cpp" />
+    <ClCompile Include="gethcount.cpp" />
+    <ClCompile Include="get_criclesetcount.cpp" />
+    <ClCompile Include="get_local.cpp" />
+    <ClCompile Include="get_manner.cpp" />
+    <ClCompile Include="get_oxy.cpp" />
+    <ClCompile Include="get_shape.cpp" />
+    <ClCompile Include="GMotion.cpp" />
+    <ClCompile Include="gotoG00.cpp" />
+    <ClCompile Include="gotoG01.cpp" />
+    <ClCompile Include="gotoG02.cpp" />
+    <ClCompile Include="gotoG03.cpp" />
+    <ClCompile Include="GTInitial.cpp" />
+    <ClCompile Include="GT_error.cpp" />
+    <ClCompile Include="home.cpp" />
+    <ClCompile Include="InputCfg.cpp" />
+    <ClCompile Include="InsertPoint.cpp" />
+    <ClCompile Include="InterpolationDemo.cpp" />
+    <ClCompile Include="InterpolationDemoDlg.cpp" />
+    <ClCompile Include="JudgeQuadrant.cpp" />
+    <ClCompile Include="judgexy.cpp" />
+    <ClCompile Include="judge_cricle.cpp" />
+    <ClCompile Include="MapAxis.cpp" />
+    <ClCompile Include="MyNewDlg.cpp" />
+    <ClCompile Include="
+			   
+			   
+			   
+			   
+			   .cpp" />
+    <ClCompile Include="PBP_Circle.cpp" />
+    <ClCompile Include="rm_BlankLine.cpp" />
+    <ClCompile Include="ShowTrack.cpp" />
+    <ClCompile Include="show_point.cpp" />
+    <ClCompile Include="SMotion.cpp" />
+    <ClCompile Include="SplitFile.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TMotion.cpp" />
+    <ClCompile Include="VMotion.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="InterpolationDemo.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="InterpolationDemo.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
